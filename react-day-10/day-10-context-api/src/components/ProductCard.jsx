@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Star } from "lucide-react";
+import { MyShop } from "../Context/MyWebsite";
 
 // 1. Yahan prop ka naam 'setIsCartItems' rakhein jo App.jsx se aa raha hai
-const ProductCard = ({ product, setIsCartItems }) => {
+const ProductCard = ({ product,  }) => {
+
+ let {setCartItems} = useContext(MyShop) 
+
   return (
     <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200">
       {/* Image */}

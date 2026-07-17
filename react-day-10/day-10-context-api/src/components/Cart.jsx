@@ -1,12 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Trash2 } from "lucide-react";
+import { MyShop } from "../Context/MyWebsite";
 
-const Cart = ({ cartItems }) => {
-  // Calculate Total Price
-  const totalPrice = cartItems.reduce(
-    (total, item) => total + item.price,
-    0
-  );
+const Cart = () => {
+ let {cartItems} = useContext(MyShop)
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
